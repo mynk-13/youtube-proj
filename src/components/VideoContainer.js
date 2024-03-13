@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { YOUTUBE_VIDEOS_API } from '../utils/constants';
-import VideoCard from './VideoCard';
+import VideoCard, {withLabel} from './VideoCard';
 import { Link } from 'react-router-dom';
 
 const VideoContainer = () => {
 
     const [videos, setVideos]=useState([]);
+
+
+   const QVideoCard = withLabel(VideoCard);
 
     useEffect(()=>{
         getVideos();
@@ -16,7 +19,7 @@ const VideoContainer = () => {
 
         const data =await fetch(YOUTUBE_VIDEOS_API);
         const json = await data.json();
-       // console.log(json);
+        console.log(json);
         setVideos(json?.items);
          
     }
@@ -25,7 +28,10 @@ const VideoContainer = () => {
 
   return (
     <div className='flex flex-wrap'>
-        {videos?.map((data)=><Link key={data.id} to={"/watch?v=" + data.id}><VideoCard info={data} /></Link>)}
+        {videos?.map((data)=><Link key={data.id} to={"/watch?v=" + data.id}>
+        {data?.contentDetails?.duration.includes("M")?<VideoCard info={data} />: <QVideoCard info={data} />}
+        </Link>)}
+
         
     </div>
   )

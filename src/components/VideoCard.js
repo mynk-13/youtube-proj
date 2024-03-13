@@ -21,4 +21,20 @@ const VideoCard = ({info}) => {
   )
 }
 
+
+export const withLabel = (VideoCard) =>{
+
+  return (props) => {
+              return <div>
+                  
+                  <label className='mx-4 my-2 p-1 absolute bg-red-600 text-slate-50 font-semibold rounded-r-md text-xs'>{"<1 min"}</label>
+                   <div><VideoCard {...props} /></div>
+                   
+                </div>
+
+
+
+  }
+}
+
 export default VideoCard;
