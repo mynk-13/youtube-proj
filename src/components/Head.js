@@ -5,8 +5,9 @@ import { YOUTUBE_SEARCH_API } from '../utils/constants';
 
 const Head = () => {
 
-    const [searchQuery, setSearchQuery] = useState("");
-    const [suggestions, setSuggestions]=useState([]);
+    const [searchQuery, setSearchQuery] = useState("");   //search value in the search bar
+    const [suggestions, setSuggestions]=useState([]);  // list of auto-suggestions coming from api
+    const [showSuggestions, setShowSuggestions]= useState(false);
 
 
     useEffect(()=>{
@@ -30,6 +31,7 @@ const Head = () => {
         console.log(json);
 
         setSuggestions(json[1]);
+        //setShowSuggestions(true);
 
     }
 
@@ -42,7 +44,7 @@ const Head = () => {
    }
 
   return (
-    <div className='grid grid-flow-col p-5 m-2 shadow-lg'>
+    <div className='sticky top-0 z-50 grid grid-flow-col p-5 m-2 shadow-lg bg-white'>
         <div className="flex col-span-1">
         <img onClick={toggleMenuHandler} 
             className='h-8 cursor-pointer'
@@ -57,17 +59,19 @@ const Head = () => {
         <div className='col-span-10 text-center'>
             <div>
                  <input className='w-1/2 border border-gray-400 p-2 rounded-l-full'
-                    type="text"  value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                    type="text"  value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
+                    onFocus={()=>setShowSuggestions(true)} onBlur={()=> setShowSuggestions(false)} />
                  <button className='border border-gray-400 py-2 px-3 rounded-r-full bg-gray-200'>🔍</button> 
             </div>
-            <div className='fixed bg-white mx-60 px-2 py-2 text-left w-[35rem] rounded-lg'>
+
+            {/* will show suggestions only when its true */}
+            {showSuggestions && (<div className='fixed bg-white mx-60 px-2 text-left w-[35rem] rounded-lg'>
                 <ul>
-                    {/* <li className='p-1 m-1 hover:bg-gray-200'>🔍 Iphone</li> */}
-                    {suggestions?.map((data, index)=> 
-                        <li key={index} className='p-1 m-1 hover:bg-gray-200'>🔍 {data}</li>)}
+                    {suggestions?.map((data)=> 
+                        <li key={data} className='p-1 m-1 hover:bg-gray-200'>🔍 {data}</li>)}
                 </ul>
 
-            </div>
+            </div>)}
            
         </div>
 
