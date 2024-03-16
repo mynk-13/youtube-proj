@@ -6,6 +6,8 @@ import { YOUTUBE_SEARCH_API } from '../utils/constants';
 const Head = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
+    const [suggestions, setSuggestions]=useState([]);
+
 
     useEffect(()=>{
 
@@ -26,6 +28,8 @@ const Head = () => {
         const json= await data.json();
 
         console.log(json);
+
+        setSuggestions(json[1]);
 
     }
 
@@ -56,14 +60,11 @@ const Head = () => {
                     type="text"  value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                  <button className='border border-gray-400 py-2 px-3 rounded-r-full bg-gray-200'>🔍</button> 
             </div>
-            <div className='fixed bg-white mx-60 px-2 py-2 text-left w-[35rem] shadow-lg rounded-lg'>
+            <div className='fixed bg-white mx-60 px-2 py-2 text-left w-[35rem] rounded-lg'>
                 <ul>
-                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 Iphone</li>
-                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
-                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
-                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
-                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
-                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
+                    {/* <li className='p-1 m-1 hover:bg-gray-200'>🔍 Iphone</li> */}
+                    {suggestions?.map((data, index)=> 
+                        <li key={index} className='p-1 m-1 hover:bg-gray-200'>🔍 {data}</li>)}
                 </ul>
 
             </div>
