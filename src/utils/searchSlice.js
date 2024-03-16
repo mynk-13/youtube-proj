@@ -12,7 +12,7 @@ const searchSlice = createSlice({
 
             //{"ip" : ["ip" , "iphone" , "iphone11", "iphone pro max"] }
 
-            state={...action.payload, ...state}; //merge the payload and the state
+            state=Object.assign(state, action.payload); //merge the payload and the state
         }
     }
 });

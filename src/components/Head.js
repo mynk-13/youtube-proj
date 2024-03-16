@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu } from '../utils/appSlice';
 import { YOUTUBE_SEARCH_API } from '../utils/constants';
+import { cacheResults } from '../utils/searchSlice';
 
 const Head = () => {
 
@@ -10,11 +11,45 @@ const Head = () => {
     const [showSuggestions, setShowSuggestions]= useState(false);
 
 
+    const cache = useSelector((store)=> store.search);
+    /**
+     * 
+     *  cache = {
+     * 
+     *    "ip" : ["iphone" , "iphone 11", "iphone 15", "iphone pro max"],
+     * 
+     *     "cri" : ["cricket", "cricbuzz", "cricinfo"], 
+     * }
+     * 
+     * 
+     * searchQuery= "iphone"
+     * 
+     * 
+     *  */ 
+
+
+
+
+    
     useEffect(()=>{
 
-        //searchSuggestions API call
+        const timerId = setTimeout(()=>{
 
-        const timerId = setTimeout(()=>getSearchSuggestions(),200);
+            if(searchQuery in cache){
+
+                setSuggestions(cache[searchQuery]);
+            }
+    
+            else{                
+                //searchSuggestions API call
+              getSearchSuggestions()
+            }
+            
+        },200);
+
+        
+
+        
 
         return ()=> {
              clearTimeout(timerId);
@@ -32,6 +67,11 @@ const Head = () => {
 
         setSuggestions(json[1]);
         //setShowSuggestions(true);
+
+
+        dispatch(cacheResults({
+            [searchQuery]:json[1]
+        }))
 
     }
 
