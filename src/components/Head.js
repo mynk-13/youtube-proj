@@ -51,9 +51,23 @@ const Head = () => {
         </div>
 
         <div className='col-span-10 text-center'>
-            <input className='w-1/2 border border-gray-400 p-2 rounded-l-full'
-               type="text"  value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-            <button className='border border-gray-400 py-2 px-3 rounded-r-full bg-gray-200'>🔍</button> 
+            <div>
+                 <input className='w-1/2 border border-gray-400 p-2 rounded-l-full'
+                    type="text"  value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                 <button className='border border-gray-400 py-2 px-3 rounded-r-full bg-gray-200'>🔍</button> 
+            </div>
+            <div className='fixed bg-white mx-60 px-2 py-2 text-left w-[35rem] shadow-lg rounded-lg'>
+                <ul>
+                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 Iphone</li>
+                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
+                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
+                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
+                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
+                    <li className='p-1 m-1 hover:bg-gray-200'>🔍 IPhone Pro</li>
+                </ul>
+
+            </div>
+           
         </div>
 
         <div>
