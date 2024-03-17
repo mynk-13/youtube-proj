@@ -18,72 +18,67 @@ export const commentsData=[
     {
         name:"Naruto Uzumaki",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-        replies:[{
-            name:"Naruto Uzumaki",
-            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-            replies:[],
-                },
-                {
-                    name:"Naruto Uzumaki",
-                    text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                    replies:[{
-                        name:"Naruto Uzumaki",
-                        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                        replies:[{
-                            name:"Naruto Uzumaki",
-                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                            replies:[{
-                                name:"Naruto Uzumaki",
-                                text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                                replies:[],
-                            },],
-                        },
-                        {
-                            name:"Naruto Uzumaki",
-                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                            replies:[],
-                        },],
-                    },],
-                },
-                {
-                    name:"Naruto Uzumaki",
-                    text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                    replies:[{
-                        name:"Naruto Uzumaki",
+        replies:[
+            {
+                name:"Master Jiraya",
+                text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                replies:[],
+            },
+            {
+                name:"Kakashi Hatake",
+                text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                replies:[
+                    {
+                        name:"Hokage Sama",
                         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
                         replies:[
-
                             {
-                                name:"Naruto Uzumaki",
+                                name:"Guy Sensei",
                                 text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                                replies:[],
+                                replies:[
+                                    {
+                                        name:"Orochimaru",
+                                        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                                        replies:[  {
+                                            name:"Naruto Uzumaki",
+                                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                                            replies:[  {
+                                                name:"Naruto Uzumaki",
+                                                text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                                                replies:[],
+                                            },],
+                                        },
+                                        {
+                                            name:"Sakura Chan",
+                                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                                            replies:[],
+                                        },
+                                    
+                                        ],
+                                    },
+                                ],
                             },
                         ],
                     },
-                
-                    {
-                        name:"Naruto Uzumaki",
-                        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
-                        replies:[],
-                    },],
-                },
                 ],
+            },
+        ],
     },
 
     {
-        name:"Naruto Uzumaki",
+        name:"Hinata",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
         replies:[],
     },
 
     {
-        name:"Naruto Uzumaki",
+        name:"Sasuke Uchiha",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
         replies:[],
     },
 
     {
-        name:"Naruto Uzumaki",
+        name:"Itachi Uchiha",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
         replies:[],
     },

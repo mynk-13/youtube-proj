@@ -2,7 +2,7 @@ import React from 'react';
 
 const Comment = ({data}) => {
 
-    const {name, text, replies} = data;
+    const {name, text} = data;
   return (
     <div className='flex py-2'>
         <div>
