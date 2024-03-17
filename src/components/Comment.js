@@ -4,7 +4,7 @@ const Comment = ({data}) => {
 
     const {name, text, replies} = data;
   return (
-    <div className='flex py-2 my-4'>
+    <div className='flex py-2'>
         <div>
         <img className='bg-white w-8' 
             alt="user-icon"

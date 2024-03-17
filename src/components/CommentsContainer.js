@@ -1,6 +1,6 @@
 import React from 'react';
-import Comment from './Comment';
 import { commentsData } from '../utils/constants';
+import CommentList from './CommentList';
 
 const CommentsContainer = () => {
 
@@ -10,8 +10,8 @@ const CommentsContainer = () => {
 
   return (
     <div className='m-5 p-2'>
-        <h1 className='text-2xl font-bold'>Comments: </h1>
-        <Comment data={commentsData[0]} /> 
+        <h1 className='text-2xl font-bold my-4'>Comments: </h1>
+        <CommentList comments={commentsData} />
     </div>
   )
 }
