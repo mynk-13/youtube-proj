@@ -6,3 +6,85 @@ export const YOUTUBE_VIDEOS_API=
 
 
 export const YOUTUBE_SEARCH_API="https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+
+export const commentsData=[
+    {
+        name:"Naruto Uzumaki",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+        replies:[],
+    },
+
+    {
+        name:"Naruto Uzumaki",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+        replies:[{
+            name:"Naruto Uzumaki",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+            replies:[],
+                },
+                {
+                    name:"Naruto Uzumaki",
+                    text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                    replies:[{
+                        name:"Naruto Uzumaki",
+                        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                        replies:[{
+                            name:"Naruto Uzumaki",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                            replies:[{
+                                name:"Naruto Uzumaki",
+                                text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                                replies:[],
+                            },],
+                        },
+                        {
+                            name:"Naruto Uzumaki",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                            replies:[],
+                        },],
+                    },],
+                },
+                {
+                    name:"Naruto Uzumaki",
+                    text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                    replies:[{
+                        name:"Naruto Uzumaki",
+                        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                        replies:[
+
+                            {
+                                name:"Naruto Uzumaki",
+                                text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                                replies:[],
+                            },
+                        ],
+                    },
+                
+                    {
+                        name:"Naruto Uzumaki",
+                        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+                        replies:[],
+                    },],
+                },
+                ],
+    },
+
+    {
+        name:"Naruto Uzumaki",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+        replies:[],
+    },
+
+    {
+        name:"Naruto Uzumaki",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+        replies:[],
+    },
+
+    {
+        name:"Naruto Uzumaki",
+        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
+        replies:[],
+    },
+];
