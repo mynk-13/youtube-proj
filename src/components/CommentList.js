@@ -3,8 +3,8 @@ import Comment from './Comment'
 
 const CommentList = ({comments}) => {
   return comments?.map((data,index)=> 
-      <div>
-        <Comment key={index} data={data}/>
+      <div key={index}>
+        <Comment  data={data}/>
 
         {/* REPLIES HARDCODED */}
         {/* <div className='pl-5 ml-5 border border-l-black'>
