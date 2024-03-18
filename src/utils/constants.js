@@ -16,7 +16,7 @@ export const commentsData=[
     },
 
     {
-        name:"Naruto Uzumaki",
+        name:"Tsunade Sama",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
         replies:[
             {
@@ -66,7 +66,7 @@ export const commentsData=[
     },
 
     {
-        name:"Hinata",
+        name:"Hinata Hyuga",
         text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero",
         replies:[],
     },
