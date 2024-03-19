@@ -35,7 +35,7 @@ const Head = () => {
 
         const timerId = setTimeout(()=>{
 
-            if(searchQuery in cache){
+            if(searchQuery[cache]){
 
                 setSuggestions(cache[searchQuery]);
             }
