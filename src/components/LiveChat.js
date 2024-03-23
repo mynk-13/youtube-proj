@@ -11,7 +11,7 @@ const LiveChat = () => {
        <div className=''>
        <ChatMessage name="Sanjay Choudhary" message="the music played is too good and wow never experienced such a movie before" />
        <ChatMessage name="Sameer Raj" message="better than the last concert" />
-       <ChatMessage name="Mayank" message="sgdfxhacvdjknmlasdlasjkdldafshjakldasf lkjajdasfjks;aljdk;jsdsa;fjasljdkasjdkasjd" />
+       <ChatMessage name="Mayank" message="sgdfxhacvdjknmlasdlasjkdldafshjakldasadhjsadbjsadbskajdnaskdsfjshsdsakda" />
        </div>
        
     </div>

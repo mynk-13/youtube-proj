@@ -1,6 +1,8 @@
 import React from 'react'
 
 const ChatMessage = ({name, message}) => {
+
+
   return (
     <div className='flex my-1'>
         <div className='py-1 w-1/12'>
@@ -10,8 +12,8 @@ const ChatMessage = ({name, message}) => {
           />
         </div>
         <div className='w-11/12'>
-          <span className='py-1 text-sm font-bold text-slate-600'>{name}</span>
-          <span className='py-1 px-1 text-sm'>{message}</span>  
+          <span className='py-1 pr-1text-sm font-bold text-slate-600'>{name}</span>
+          <span className='py-1 px-1 text-sm break-all'>{message}</span>  
         </div>
         
     </div>
