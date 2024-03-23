@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import ChatMessage from './ChatMessage'
 import { useDispatch, useSelector } from 'react-redux';
 import { addMessage } from '../utils/chatSlice';
+import { generateRandomMessage, generateRandomName } from '../utils/helper';
 
 
 const LiveChat = () => {
@@ -17,8 +18,8 @@ const LiveChat = () => {
             //API Polling
              
             dispatch(addMessage({
-                name:"Virat",
-                message:"Old is gold in terms of songs♥"
+                name: generateRandomName(),
+                message: generateRandomMessage(Math.floor(Math.random()*100)),
             }))
         },2000);
 
@@ -31,9 +32,9 @@ const LiveChat = () => {
 
 
   return (
-    <div className='ml-2 w-full h-[500px] p-2 border border-slate-300 rounded-2xl  overflow-y-scroll'>
+    <div className='ml-2 w-full h-[500px] px-2 pb-2 border border-slate-400 rounded-2xl  overflow-y-scroll'>
        
-       <div className='my-2 py-1 px-1 font-medium border-b-2 border-b-slate-300'>
+       <div className='mt-0 pt-2 mb-2 pb-2 px-1 text-lg font-medium border-b-2 bg-white border-b-slate-300 sticky top-0 z-50'>
          Live Chat 
        </div>
        <div className=''>
