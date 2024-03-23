@@ -1,15 +1,25 @@
 import React, { useEffect } from 'react'
 import ChatMessage from './ChatMessage'
+import { useDispatch, useSelector } from 'react-redux';
+import { addMessage } from '../utils/chatSlice';
 
 
 const LiveChat = () => {
 
 
+    const dispatch=useDispatch();
+
+    const liveChatMessages = useSelector(store => store.chat.messages);
+
     useEffect(()=>{
 
         const id= setInterval(()=>{
             //API Polling
-            console.log("API Polling");
+             
+            dispatch(addMessage({
+                name:"Virat",
+                message:"Old is gold in terms of songs♥"
+            }))
         },2000);
 
         return ()=>clearInterval(id);
@@ -27,9 +37,11 @@ const LiveChat = () => {
          Live Chat 
        </div>
        <div className=''>
-       <ChatMessage name="Sanjay Choudhary" message="the music played is too good and wow never experienced such a movie before" />
+       {/* <ChatMessage name="Sanjay Choudhary" message="the music played is too good and wow never experienced such a movie before" />
        <ChatMessage name="Sameer Raj" message="better than the last concert" />
-       <ChatMessage name="Mayank" message="sgdfxhacvdjknmlasdlasjkdldafshjakldasadhjsadbjsadbskajdnaskdsfjshsdsakda" />
+       <ChatMessage name="Mayank" message="sgdfxhacvdjknmlasdlasjkdldafshjakldasadhjsadbjsadbskajdnaskdsfjshsdsakda" /> */}
+
+       {liveChatMessages?.map((data,index)=> <ChatMessage key={index} name={data.name} message={data.message} />)}
        </div>
        
     </div>
