@@ -21,7 +21,7 @@ const LiveChat = () => {
                 name: generateRandomName(),
                 message: generateRandomMessage(Math.floor(Math.random()*100)),
             }))
-        },2000);
+        },500);
 
         return ()=>clearInterval(id);
 
@@ -32,20 +32,21 @@ const LiveChat = () => {
 
 
   return (
-    <div className='ml-2 w-full h-[500px] px-2 pb-2 border border-slate-400 rounded-2xl  overflow-y-scroll'>
-       
+
+    <div className='ml-2 w-full h-[500px] px-2 pb-2 border border-slate-400 rounded-2xl'>
        <div className='mt-0 pt-2 mb-2 pb-2 px-1 text-lg font-medium border-b-2 bg-white border-b-slate-300 sticky top-0 z-50'>
          Live Chat 
-       </div>
-       <div className=''>
+       </div> 
+       <div className='h-[430px] overflow-y-scroll flex flex-col-reverse'>
        {/* <ChatMessage name="Sanjay Choudhary" message="the music played is too good and wow never experienced such a movie before" />
        <ChatMessage name="Sameer Raj" message="better than the last concert" />
        <ChatMessage name="Mayank" message="sgdfxhacvdjknmlasdlasjkdldafshjakldasadhjsadbjsadbskajdnaskdsfjshsdsakda" /> */}
 
        {liveChatMessages?.map((data,index)=> <ChatMessage key={index} name={data.name} message={data.message} />)}
-       </div>
        
     </div>
+    </div>
+    
   )
 }
 
