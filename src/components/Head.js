@@ -101,7 +101,7 @@ const Head = () => {
                  <input className='w-1/2 border border-gray-400 p-2 rounded-l-full'
                     type="text"  value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
                     onFocus={()=>setShowSuggestions(true)} onBlur={()=> setShowSuggestions(false)} />
-                 <button className='border border-gray-500 py-2 px-3 rounded-r-full bg-gray-200'>🔍</button> 
+                 <button className='border border-gray-500 py-2 px-3 rounded-r-full bg-gray-300'>🔍</button> 
             </div>
 
             {/* will show suggestions only when its true */}
