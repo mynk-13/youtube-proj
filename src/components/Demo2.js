@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const Demo2 = () => {
 
@@ -9,6 +9,16 @@ const Demo2 = () => {
    // ref={current :0}
 
        console.log("Rendering.....");
+
+      
+       let i;
+       useEffect(()=>{
+
+      i = setInterval(()=>{console.log("Namaste React ", Math.random()*10)},1000);
+
+       return ()=> clearInterval(i);
+       },[]);
+
   return (
     <div className='m-4 p-2 w-96 h-96 bg-slate-50 border border-black '>
         <div>
@@ -35,6 +45,8 @@ const Demo2 = () => {
             <span className='font-bold text-xl'>Ref = {ref.current}</span>
 
         </div>
+        <button onClick={()=> clearInterval(i)} 
+         className='m-4 p-4 bg-red-900 text-white font-bold rounded-md'>Stop Printing</button>
     </div>
   )
 }
