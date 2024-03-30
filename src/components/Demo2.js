@@ -11,12 +11,16 @@ const Demo2 = () => {
        console.log("Rendering.....");
 
       
-       let i;
+    //    let i={
+    //     current:null,
+    //    };
+
+      const i= useRef(null);
        useEffect(()=>{
 
-      i = setInterval(()=>{console.log("Namaste React ", Math.random()*10)},1000);
+      i.current = setInterval(()=>{console.log("Namaste React ", Math.random()*10)},1000);
 
-       return ()=> clearInterval(i);
+       return ()=> clearInterval(i.current);
        },[]);
 
   return (
@@ -41,11 +45,11 @@ const Demo2 = () => {
              onClick={()=>{
                 ref.current=ref.current+1;
                 console.log("ref = ", ref.current);
-             }}>Increase y</button>
+             }}>Increase Ref</button>
             <span className='font-bold text-xl'>Ref = {ref.current}</span>
 
         </div>
-        <button onClick={()=> clearInterval(i)} 
+        <button onClick={()=> clearInterval(i.current)} 
          className='m-4 p-4 bg-red-900 text-white font-bold rounded-md'>Stop Printing</button>
     </div>
   )

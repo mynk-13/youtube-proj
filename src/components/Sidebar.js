@@ -15,6 +15,7 @@ const Sidebar = () => {
         <div className='p-5 shadow-lg w-44'>
             <ul className='border-b-2 border-gray-300 py-2'>
                 <li><Link to="/">Home</Link></li>
+                {/* <li><Link to="/demo">Demo</Link></li> */}
                 <li>Shorts</li>
                 <li>Subscriptions</li>
                 
