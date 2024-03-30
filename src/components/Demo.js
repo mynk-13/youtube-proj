@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { findPrime } from '../utils/helper';
 
 const Demo = () => {
@@ -8,10 +8,17 @@ const Demo = () => {
 
     //console.log("Rendering....");
 
-    const prime =() => {
-         console.log("Calculating prime no of ", text); 
-        return findPrime(text);
-    }
+    // const prime = () => {
+    //      console.log("Calculating prime no of ", text); 
+    //     return findPrime(text);
+    // }
+
+    /** MEMOIZATION */
+
+    const prime= useMemo(()=>{
+        
+        console.log("Calculating prime no of ", text); 
+        return findPrime(text)}, [text]);
 
     return (
     <div className={'m-4 p-2 w-96 h-96 border border-black ' + (isDarkTheme && "bg-black text-white")}>
@@ -27,7 +34,7 @@ const Demo = () => {
             <button></button>
         </div>
         <div>
-            <h1 className='mt-4 font-bold text-xl'>nth Prime: {prime()} </h1>
+            <h1 className='mt-4 font-bold text-xl'>nth Prime: {prime} </h1>
         </div>
 
     </div>
