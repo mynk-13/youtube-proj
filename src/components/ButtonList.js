@@ -6,7 +6,7 @@ import rightScrollIcon from "../icons/rightScrollIcon.svg";
 const ButtonList = () => {
 
   const scrollRef = useRef(null);
-    const list=["All", "JavaScipt", "ReactJS", "NodeJS", "IPL", "Elections" , "Stocks", "Cricket", "Live", "Gaming", "News","Cooking","Motivation", "Music", "Spiritual" ,"Recent",];
+    const list=["All", "JavaScipt", "ReactJS", "NodeJS", "IPL", "Elections" , "Stocks", "Cricket", "Live", "Gaming", "News","Motivation", "Cooking", "Music", "Spiritual" ,"Recent",];
   
     const prevHandler = () => {
       requestAnimationFrame(() => {

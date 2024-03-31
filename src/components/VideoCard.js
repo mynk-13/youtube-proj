@@ -6,17 +6,33 @@ const VideoCard = ({info}) => {
 
     const {snippet, statistics}=info;
 
-    const {title, channelTitle, thumbnails}=snippet;
+    const {title, channelTitle, thumbnails, publishedAt}=snippet;
 
     const {viewCount}=statistics;
 
 
   return (
-    <div className='p-2 m-2 w-72 shadow-md'>
-        <img className="rounded-lg" src={thumbnails.medium.url} alt="thumbnail" />
-        <h1 className='font-bold py-2'>{title}</h1>
-        <div>{channelTitle}</div>
-        <div>{viewCount} views</div>
+    <div className='p-2 m-2 w-72'>
+        <img className="rounded-lg hover:drop-shadow-xl" src={thumbnails?.medium?.url} alt="thumbnail" />
+        <ul className="flex justify-start items-start">
+        <img
+          className="rounded-full w-7 h-7 mt-2 mr-2"
+          alt="channel-img"
+          src={thumbnails?.default?.url}
+        />
+
+        <div>
+           <li className="font-semibold py-2 text-[14px] line-clamp-2 max-h-[50px] leading-5">{title}</li>
+           <li className="text-gray-800 text-[13px]">{channelTitle}</li>
+           <li className="text-gray-800 text-[13px]">
+            {viewCount} views{" "}   
+            <span className="font-bold text-xl m-1">·</span>
+            {Math.floor(Math.abs(new Date(publishedAt) - new Date()) / (60 * 60 * 24 * 1000))}
+            <span className="ml-1">days ago</span>
+          </li>
+        </div>
+         
+        </ul>
     </div>
   )
 }
