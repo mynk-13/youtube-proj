@@ -21,7 +21,6 @@ import newsIcon from "../icons/newsIcon.svg";
 import sportsIcon from "../icons/sportsIcon.svg";
 import learningIcon from "../icons/learningIcon.svg";
 import fashionIcon from "../icons/fashionIcon.svg";
-import ytPremiumIcon from "../icons/ytPremiumIcon.svg";
 import ytStudioIcon from "../icons/ytStudioIcon.svg";
 import ytMusicIcon from "../icons/ytMusicIcon.svg";
 import ytKidsIcon from "../icons/ytKidsIcon.svg";
@@ -146,22 +145,22 @@ const Sidebar = () => {
         <li className="my-1 p-1 py-2 hover:bg-gray-100 cursor-pointer rounded-lg">
           <Link to={"/"}>
             {" "}
-            Scary Fun{" "}
+            ISRO Official{" "}
             <img
               className="inline-block align-bottom mr-3"
               src={redLiveIcon}
-              alt="ScaryFun"
+              alt="ISRO Official"
             />{" "}
           </Link>
         </li>
         <li className="my-1 p-1 py-2 hover:bg-gray-100 cursor-pointer rounded-lg">
           <Link to={"/"}>
             {" "}
-            Crime Tak{" "}
+            Microsoft Azure{" "}
             <img
               className="inline-block align-bottom mr-3"
               src={redLiveIcon}
-              alt="CrimeTak"
+              alt="Microsoft Azure"
             />{" "}
           </Link>
         </li>
@@ -287,24 +286,13 @@ const Sidebar = () => {
               src={fashionIcon}
               alt="FashionBeauty"
             />{" "}
-            Fashion & Beauty
+            Fashion
           </Link>
         </li>
       </ul>
       <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-200" />
       <h1 className="font-medium pt-5">More From Youtube</h1>
       <ul>
-        <li className="my-1 p-1 py-2 hover:bg-gray-100 cursor-pointer rounded-lg">
-          <Link to={"/"}>
-            {" "}
-            <img
-              className="inline-block align-bottom mr-3"
-              src={ytPremiumIcon}
-              alt="YoutubePremium"
-            />{" "}
-            Youtube Premium
-          </Link>
-        </li>
         <li className="my-1 p-1 py-2 hover:bg-gray-100 cursor-pointer rounded-lg">
           <Link to={"/"}>
             {" "}
