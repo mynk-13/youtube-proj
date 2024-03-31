@@ -188,7 +188,7 @@ const Head = () => {
                   <img
                     className="mr-5 h-4 ml-3 inline-block"
                     alt="search-icon"
-                    src="https://cdn-icons-png.flaticon.com/512/482/482631.png"
+                    src="https://www.svgrepo.com/show/157848/search.svg"
                   />
                   <span>{suggestion}</span>
                 </li>
